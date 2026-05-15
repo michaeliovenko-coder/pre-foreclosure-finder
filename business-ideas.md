@@ -504,6 +504,227 @@ Running 3 newsletters at steady state: **$15,000–$18,000/mo** with 1 person + 
 
 ---
 
+---
+
+## Idea #8 — 2026-05-15 (Round 3)
+
+**Decision: BUILD UPON TechBuddy (Idea #3)** — Consumer visits are good ($89 one-off), but small businesses have the same problem and a much higher willingness to pay for reliability. A $399/month retainer replaces the unpredictable consumer job queue with recurring, predictable B2B revenue on the same skill set and buddy network.
+
+---
+
+### TechBuddy for Business — Fractional IT Support on a Monthly Retainer
+
+**One-liner:** Small businesses (5–30 employees) get a dedicated TechBuddy on a monthly retainer for on-site and remote support — network issues, device setup, printer nightmares, software updates, and staff tech questions — for less than the cost of one Geek Squad visit per week.
+
+---
+
+#### Why Now (Market Opportunity)
+
+- 33 million U.S. small businesses exist; the vast majority (under 20 employees) have no IT staff and no MSP contract — they're either suffering through tech problems or paying break-fix rates of $125–$200/hr when things go wrong.
+- Managed Service Providers (MSPs) typically require a minimum of $1,500–$3,000/month and target companies with 50+ employees — there's a complete market gap for the 5–30 employee tier.
+- Post-pandemic hybrid work means even tiny businesses now run cloud apps, VPNs, video conferencing, and mobile device fleets. Complexity has grown; IT support supply for small businesses has not.
+- TechBuddy already has a vetted buddy network and a booking system. Adding a B2B retainer tier is a configuration change, not a rebuild.
+
+---
+
+#### Startup Cost Breakdown
+
+*Incremental cost on top of existing TechBuddy infrastructure — not starting from scratch.*
+
+| Item | Cost |
+|------|------|
+| B2B sales materials (1-pager, email sequence, Calendly booking page) | $0–$500 |
+| Simple contract template (SLA, scope of work, cancellation terms) | $500 legal review |
+| Slack Connect or dedicated communication channel per client | $0 |
+| Business liability insurance upgrade (covers commercial property work) | +$600/yr over consumer policy |
+| First 3-month paid acquisition: LinkedIn ads targeting small biz owners by zip code | $2,000 |
+| **Total incremental** | **~$3,000–$4,000** |
+
+---
+
+#### Revenue Model
+
+| Plan | Price | Included |
+|------|-------|----------|
+| Essentials | $399/mo | 2 on-site visits/mo + unlimited remote support (business hours) |
+| Growth | $699/mo | 4 on-site visits/mo + unlimited remote + staff tech training session/mo |
+| On-Call | $1,199/mo | Unlimited visits + same-day response SLA + after-hours emergency line |
+
+- 20 Essentials clients → **$7,980 MRR** with ~2 buddies working full schedules
+- Cross-sell path: existing TechBuddy consumer clients who own a business → warm intro, no acquisition cost
+- Annual contracts (10% discount) dramatically improve LTV and cash flow predictability
+
+---
+
+#### Build Path
+
+1. Call every current TechBuddy consumer client and ask: "Do you own or manage a business?" — mine the existing customer base first
+2. Walk into 20 local small businesses (hair salons, dental offices, law firms, restaurants) with a one-page pitch: "$399/month, we handle all your tech headaches"
+3. Sign first 3 clients with a handshake deal and a simple email contract — no app needed
+4. After 3 months and proven delivery, productize: add the retainer tier to the TechBuddy booking app, build a client portal with ticket tracking
+5. Hire a second dedicated "B2B buddy" once you hit 10 retainer clients
+
+---
+
+#### Risks
+
+- B2B clients have higher expectations and lower patience than consumers — SLAs must be honored
+- A single buddy calling in sick can blow an SLA for a business client; need backup coverage baked in from day one
+- Scope creep: small businesses will try to use an "IT retainer" to build them a website — define scope clearly in the contract
+
+---
+
+**Estimated time to first paying client:** 1–2 weeks (it's a sales motion, not a build motion)
+
+---
+
+## Idea #9 — 2026-05-15 (Round 3)
+
+**Decision: BRANCH OFF** — New vertical: pet health tech. Completely untouched market segment with massive emotional spend and no dominant affordable player.
+
+---
+
+### PawCare — AI Pet Health Monitor + On-Demand Vet Video Calls
+
+**One-liner:** A $24/month app where pet owners log symptoms, upload photos and short videos of their pet, get an AI-powered triage assessment, and — when needed — connect to a licensed vet within 30 minutes via video call for $35.
+
+---
+
+#### Why Now (Market Opportunity)
+
+- Americans spent $147 billion on pets in 2023; that number is higher in 2026. Millennials and Gen Z treat pets as family members and spend aggressively on their health.
+- Emergency vet visits cost $800–$3,000 and involve a 2–4 hour wait. Most pet owners can't tell whether a symptom is an emergency or a "wait and see" situation — they either panic-spend or under-react.
+- Telehealth for pets (Airvet, Vetster, Dutch) exists but is fragmented and appointment-only. There's no app that does continuous AI monitoring *plus* on-demand video in one sub-$30/month package.
+- AI vision models are now capable enough (GPT-4o, Claude 3.5 vision) to analyze a photo of a wound, rash, or swollen limb and give meaningful triage guidance — this wasn't possible at this quality level two years ago.
+- Vet shortages are acute in 2026 — 40% of the U.S. lacks adequate veterinary access. Telehealth fills this gap for non-emergency care (the majority of cases).
+
+---
+
+#### Startup Cost Breakdown
+
+| Item | Cost |
+|------|------|
+| LLC + terms of service (must include medical disclaimer clearly) | $800 |
+| Mobile app MVP — React Native + Expo + Supabase | $0 self-build or $6,000 contractor |
+| Claude/GPT-4o Vision API for symptom triage | ~$0.02 per triage session, scales with users |
+| Vet network integration — partner with Vetster or PetDesk API, or recruit 5 independent vets at $30/video call | $0 integration or $500 setup |
+| App Store + Play Store developer accounts | $125 one-time |
+| Marketing: Instagram/TikTok pet content creators (micro-influencers, 10k–100k followers) | $2,000 for 10 paid posts |
+| Legal: veterinary telemedicine compliance review (varies by state) | $1,500 |
+| **Total** | **~$8,000–$13,000** |
+
+---
+
+#### Revenue Model
+
+| Stream | Amount |
+|--------|--------|
+| $24/month subscription (AI triage, health log, reminders) | Main recurring revenue |
+| $35/video vet call (platform keeps $10, vet keeps $25) | Per-session |
+| Pet insurance referral (Trupanion, Lemonade Pet) | $25–$75 per policy sold |
+| Pharmacy referral (1-800-PetMeds, Chewy Pharmacy) | 5–8% of prescription orders |
+
+- 1,000 subscribers → **$24,000 MRR** + call revenue
+- Pet owners churn very slowly — they keep subscribing as long as they have the pet (avg 10–12 year relationship)
+
+---
+
+#### Build Path
+
+1. Launch a "manual AI" version first: users text/email you a photo + description, you use Claude to generate a triage response, charge $35 per consult — no app
+2. Validate that people will pay before writing a line of code
+3. Build the mobile app once you have 50 paying consults completed
+4. Add the subscription tier once the app is live and users are returning
+5. Grow via pet micro-influencers on TikTok/Instagram — one viral "my dog had this symptom, PawCare told me to go to the ER immediately and saved his life" story is worth 10,000 paid ads
+
+---
+
+#### Risks
+
+- Veterinary telemedicine regulations vary by state — some states require an existing vet-client-patient relationship before a telehealth consultation
+- AI misdiagnosis liability is real — must include clear disclaimers and conservative triage logic (when in doubt, recommend an in-person vet visit)
+- App store review may flag health claims — keep language as "guidance" not "diagnosis"
+
+---
+
+**Estimated time to first paying customer:** 3–5 days (text/email MVP, no code)
+
+---
+
+## Idea #10 — 2026-05-15 (Round 3)
+
+**Decision: BRANCH OFF** — New vertical: immigration & legal self-service. High willingness to pay, chronically underserved by technology, zero competition at this price point.
+
+---
+
+### VisaPath — TurboTax for Common U.S. Visa Applications
+
+**One-liner:** A guided, step-by-step web app that walks individuals through the most common U.S. visa and immigration filings — H-1B transfers, green card I-485 packages, spousal visas, DACA renewals — for a flat $149–$299 per application, versus $3,000–$8,000 for an immigration attorney.
+
+---
+
+#### Why Now (Market Opportunity)
+
+- 45 million immigrants live in the U.S.; millions more are navigating the process from abroad. Immigration attorney fees are $3,000–$10,000 for filings that are fundamentally form-completion tasks.
+- USCIS publishes all forms and instructions publicly. The complexity isn't legal strategy — it's knowing *which* form, *which* version, *which* supporting documents, and *in what order*. This is exactly what a guided wizard solves.
+- Immigration anxiety is at a peak in 2026 — any tool that reduces uncertainty and gives people confidence in their filing has enormous emotional value.
+- TurboTax proved the model: people will pay $150 for software that walks them through a complex government process they could theoretically do themselves. The immigration market is 10× more anxious and has no equivalent product.
+- Existing players (RapidVisa, CitizenPath) are narrow and dated. An AI-assisted, conversational approach that explains *why* each step matters is meaningfully better.
+
+---
+
+#### Startup Cost Breakdown
+
+| Item | Cost |
+|------|------|
+| LLC + legal review of UPL (Unauthorized Practice of Law) guardrails — critical | $2,000 |
+| Immigration attorney consultant (to review each workflow for accuracy, ongoing) | $1,500 one-time review per form type |
+| Web app MVP — Next.js wizard UI + Supabase + PDF generation (pdf-lib) | $0 self-build or $5,000 contractor |
+| USCIS form version monitoring (government forms update regularly — must track versions) | $0 (manual process initially) |
+| Stripe one-time payment setup | $0 |
+| Marketing: immigrant community Facebook groups, Reddit r/immigration, YouTube immigration channels | $0–$500 |
+| Paid ads targeting immigration-related search keywords (Google) | $3,000 for first 90 days |
+| **Total** | **~$8,000–$14,000** |
+
+---
+
+#### Revenue Model
+
+| Offering | Price |
+|----------|-------|
+| Single application package (I-485, I-130, I-765, etc.) | $149–$299 one-time |
+| Family bundle (primary + spouse + dependents) | $449 |
+| Annual "Immigration Concierge" subscription | $199/yr — covers unlimited form prep + document checklist updates |
+| Attorney referral (for complex cases beyond the scope of the tool) | $200–$500 referral fee per case |
+
+- 100 completed applications/month → **$20,000–$30,000/month revenue** at average $229/application
+- Referral fees from immigration attorneys create a revenue floor even for cases VisaPath can't handle
+
+---
+
+#### Build Path
+
+1. Start with **one form**: the I-765 (Employment Authorization Document / work permit) — it's one of the most commonly filed, relatively simple, and needed by a huge range of applicants
+2. Build a 15-step wizard in Notion or Typeform first — validate that users complete it and feel confident before building a real app
+3. Manually review each completed form package before delivery for the first 50 customers (quality control + learning what people get wrong)
+4. Expand to I-485 (adjustment of status) and I-130 (family petition) in months 3–4 — these are higher-value and higher-volume
+5. Add AI chat ("why do I need this document?" "what if I don't have this?") powered by Claude in v2
+
+---
+
+#### Risks
+
+- Unauthorized Practice of Law (UPL) — must clearly position as a "document preparation service," not legal advice. Include attorney review option and prominent disclaimers.
+- USCIS form versions change without much notice — a stale form can cause a rejection. Need a monitoring system (USCIS RSS feed + email alert).
+- High-stakes errors: a wrong filing can have serious consequences for the user's immigration status — quality control is not optional
+- Political/regulatory risk: immigration policy shifts can change filing requirements rapidly
+
+---
+
+**Estimated time to first paying customer:** 2–3 weeks (Typeform wizard + manual review)
+
+---
+
 ## Token Usage Tracker
 
 | Session | Date | Ideas Generated | Approx Tokens Used |
@@ -511,4 +732,5 @@ Running 3 newsletters at steady state: **$15,000–$18,000/mo** with 1 person + 
 | 1 | 2026-05-15 | Idea #1 (AssumeAlert) | ~2,500 |
 | 2 | 2026-05-15 | Ideas #2–4 (AgentWatch, TechBuddy, PocketTown) | ~6,000 |
 | 3 | 2026-05-15 | Ideas #5–7 (PromptGuard, ChargeSpot, ClearWealth) | ~8,000 |
-| **Total** | | | **~16,500 / ~150,000 cap (~$50)** |
+| 4 | 2026-05-15 | Ideas #8–10 (TechBuddy Biz, PawCare, VisaPath) | ~9,000 |
+| **Total** | | | **~25,500 / ~150,000 cap (~$50)** |
