@@ -290,10 +290,225 @@ Running 3 newsletters at steady state: **$15,000–$18,000/mo** with 1 person + 
 
 ---
 
+---
+
+## Idea #5 — 2026-05-15 (Round 2)
+
+**Decision: BUILD UPON AgentWatch (Idea #2)** — AgentWatch logs what AI agents *do*. The natural next product is stopping what they *shouldn't do* in real time. Same buyer persona, faster sale, higher willingness to pay — security budgets are larger than observability budgets.
+
+---
+
+### PromptGuard — Real-Time Prompt Injection Firewall for AI Agents
+
+**One-liner:** A drop-in proxy that sits between your app and any LLM API, scanning every prompt and response for injection attacks, jailbreaks, and data exfiltration attempts — and blocking them before they execute.
+
+---
+
+#### Why Now (Market Opportunity)
+
+- Prompt injection is now the #1 AI security threat: a malicious website, document, or user message tricks an AI agent into ignoring its instructions and doing something harmful (deleting records, leaking PII, sending unauthorized emails).
+- As of 2026, there is no affordable, turn-key firewall for this at the SMB level. OWASP's LLM Top 10 lists prompt injection as risk #1, yet most teams are still using manual prompt hardening that doesn't scale.
+- Every company that adopted an AI agent in 2024–2025 is now realizing they have an unpatched attack surface. Insurance carriers are starting to ask about AI security controls — this creates a compliance pull.
+- PromptGuard is a natural upsell to every AgentWatch customer ("you can see the attack happened — now you can prevent it") and a standalone product for the much larger market that doesn't use AgentWatch yet.
+
+---
+
+#### Startup Cost Breakdown
+
+| Item | Cost |
+|------|------|
+| LLC + legal (ToS, privacy, security disclosure policy) | $800 |
+| Hosting — fly.io (low-latency proxy servers in 3 regions) | $200/mo |
+| LLM classifier to detect injections (fine-tuned small model via Together AI) | $2,000 one-time fine-tuning + $50/mo inference |
+| Red-team dataset for training (adversarial prompt library, can source from HuggingFace) | $0 |
+| Domain + docs site | $100 |
+| Stripe billing | $0 |
+| Security audit of the proxy itself (critical — you're in the data path) | $3,000 |
+| Launch marketing — AppSec/AI security newsletters, DEF CON AI Village community | $1,000 |
+| **Total** | **~$8,000–$12,000** |
+
+---
+
+#### Revenue Model
+
+- **$99/month** — Starter (up to 1M tokens/mo proxied, 5 rule policies)
+- **$399/month** — Business (10M tokens/mo, custom rules, compliance report export)
+- **$999/month** — Enterprise (unlimited, SOC 2 ready, SLA)
+- The proxy model is sticky: once you're in the data path, switching cost is very high.
+- AgentWatch cross-sell path: offer a bundled "AgentWatch + PromptGuard" plan at $399/mo — security + observability in one.
+
+---
+
+#### Build Path
+
+1. Build an OpenAI-compatible proxy endpoint (drop-in replacement for `api.openai.com`) that any app can point to with one env var change
+2. Implement rule-based detection first (keyword/pattern matching for common injection templates) — ship fast
+3. Layer in the fine-tuned classifier for subtle attacks in v2
+4. Add a dashboard showing blocked attacks, attack type breakdown, and a one-click block/allow decision UI
+5. Get 3 design partners from the AgentWatch waitlist — build with them, charge them from day one
+
+---
+
+#### Risks
+
+- Being in the data path means you see customers' prompts — privacy policy and encryption must be airtight
+- Latency overhead of the proxy (target < 50ms p99) — needs careful infrastructure work
+- Attackers constantly evolve; detection must be continuously updated
+
+---
+
+**Estimated time to first paying customer:** 8–10 weeks (proxy infrastructure is harder than a dashboard)
+
+---
+
+## Idea #6 — 2026-05-15 (Round 2)
+
+**Decision: BRANCH OFF** — New vertical: physical infrastructure + sharing economy. Zero overlap with previous ideas.
+
+---
+
+### ChargeSpot — Airbnb for Residential EV Chargers
+
+**One-liner:** A marketplace where EV owners can book charging sessions at verified private driveways and parking spots — turning every homeowner with a Level 2 charger into a micro-income source.
+
+---
+
+#### Why Now (Market Opportunity)
+
+- 52 million EVs are on U.S. roads as of 2026. Public fast-charging networks (Tesla Supercharger, Electrify America) are congested and geographically thin in suburbs and small cities.
+- Millions of homeowners installed Level 2 chargers (240V, 19–28 mph charge rate) during the 2021–2024 EV boom and only use them for their own car 8–10 hours/day, leaving 14+ hours of idle capacity.
+- Apartment dwellers and condo owners with EVs have no home charging option — they're the most underserved, highest-value user segment.
+- The sharing economy for cars (Turo), homes (Airbnb), and boats (Boatsetter) is proven. Charging infrastructure is the next physical asset class to be unlocked.
+- IRA incentives made Level 2 home charger installation cheap ($0–$500 after credits) — supply of host chargers is large and growing.
+
+---
+
+#### Startup Cost Breakdown
+
+| Item | Cost |
+|------|------|
+| LLC + insurance (platform liability policy) | $1,500 |
+| MVP app — React Native on Expo + Supabase backend | $0 (self-build) or $5,000 (contractor) |
+| Stripe Connect (marketplace payouts) | 0.25% + $0.25 per payout |
+| Smart plug / charger verification kit (to certify host chargers, 20 units) | $1,200 |
+| Google Maps API for charger discovery map | $200/mo at scale, free tier to start |
+| Marketing: EV owner Facebook groups, Reddit r/electricvehicles, local EV clubs | $0–$500 |
+| Paid ads — target EV owners in charger-sparse zip codes | $2,000 |
+| Legal: host agreement, liability waiver | $1,000 |
+| **Total** | **~$7,000–$12,000** |
+
+---
+
+#### Revenue Model
+
+- Platform takes **15%** of every session
+- Hosts set their own rate — market average $1.50–$2.50/hour of Level 2 charging
+- A busy host (10 sessions/week × 3 hrs avg × $2/hr) earns ~$60/week → platform earns $9/week per host
+- 500 active hosts → $4,500/week → **~$18,000/month platform revenue**
+- Premium tier: "ChargeSpot Verified" badge ($49/yr host subscription) for hosts who complete a quality inspection — higher listing visibility
+
+---
+
+#### Build Path
+
+1. Launch in one dense EV city (Austin, Denver, or Portland — high EV adoption, charger gaps)
+2. Manually recruit 20 hosts via local EV Facebook groups and Next-door — offer 0% commission for the first 6 months
+3. Build the map-based discovery MVP (can start as a simple Airtable + Google Maps embed)
+4. Integrate Stripe Connect for host payouts
+5. Get 50 successful sessions → write the press release → pitch EV media (Electrek, InsideEVs)
+
+---
+
+#### Risks
+
+- Liability if a charger malfunctions and damages a vehicle — insurance is essential
+- Hosts may go off-platform once they find a regular customer (disintermediation risk)
+- Tesla owners with proprietary connectors need an adapter (less friction now that NACS is standard in 2026)
+
+---
+
+**Estimated time to first paying customer:** 2–3 weeks (launch manually, no app needed initially)
+
+---
+
+## Idea #7 — 2026-05-15 (Round 2)
+
+**Decision: BRANCH OFF** — New vertical: personal finance coaching. Targets a massive underserved market with a scalable AI + human hybrid model.
+
+---
+
+### ClearWealth — AI-Powered Financial Coaching for the Middle Class
+
+**One-liner:** A $29/month subscription that gives middle-income Americans a personalized financial plan, weekly AI check-ins, and access to a human Certified Financial Counselor — everything a $300/hr advisor offers at 1/10th the cost.
+
+---
+
+#### Why Now (Market Opportunity)
+
+- 57% of Americans have less than $1,000 in savings. The typical financial advisor requires $250k+ in investable assets and charges $200–$400/hr — pricing out 140 million middle-class Americans.
+- AI can now hold a coherent, personalized financial conversation, remember your goals and past sessions, and generate a real financial plan — but people still want a human in the loop for accountability and trust.
+- LLM context windows and memory are finally long enough (2025–2026 models) to maintain a real ongoing coaching relationship, not just one-off Q&A.
+- Employer benefits budgets are shifting toward financial wellness — this is a B2B2C distribution path (sell to HR departments as an employee benefit for $5–8/employee/month).
+- Competitor apps (Mint is dead, YNAB is budgeting-only, Facet charges $100+/mo) leave a clear gap at the $20–35/month price point with human coaching included.
+
+---
+
+#### Startup Cost Breakdown
+
+| Item | Cost |
+|------|------|
+| LLC + compliance review (financial coaching ≠ financial advice — legal distinction matters) | $1,500 |
+| Claude or GPT-4o API costs (estimated at $0.50–$1.00 per active user per month) | Scales with revenue |
+| Web app MVP — Next.js + Supabase + Stripe | $0 self-build or $5,000 contractor |
+| 2 part-time Certified Financial Counselors (AFC credential, ~$30/hr, 10 hrs/week each) | $2,400/mo |
+| Domain + Intercom (for human handoff chat) | $300/mo |
+| Marketing: personal finance subreddits (r/personalfinance, r/povertyfinance), TikTok finance creators | $2,000 |
+| **Total** | **~$5,000–$10,000 upfront + ~$3,000/mo operating until revenue covers it** |
+
+---
+
+#### Revenue Model
+
+| Tier | Price | What's Included |
+|------|-------|-----------------|
+| Basic | $19/mo | AI coach only, unlimited chat, monthly plan refresh |
+| Plus | $29/mo | AI coach + 1 live 20-min human session/mo |
+| Premium | $59/mo | AI coach + 2 live sessions + tax planning add-on |
+| B2B employer | $6/employee/mo | All-access for employee population |
+
+- 500 Plus subscribers → $14,500 MRR
+- One employer deal with 200 employees → $1,200/mo recurring with zero marginal cost
+- Referral fees from partner brokerages (Fidelity, Schwab) when users open investment accounts: $50–$200 per funded account
+
+---
+
+#### Build Path
+
+1. Start as a done-for-you service: manually coach 20 beta users for $29/mo using Claude + a Google Doc financial plan template — no app needed
+2. Identify the 5 most common financial situations (debt payoff, first investment account, emergency fund, buying a home, retirement basics) and build AI playbooks for each
+3. Hire one AFC-credentialed counselor part-time for the human session component
+4. Build the web app only after validating that users renew for 3+ months
+5. Pitch the first employer deal to a small company (50–200 employees) in month 4
+
+---
+
+#### Risks
+
+- Regulatory gray area: "financial coaching" vs. "financial advice" — must not recommend specific securities (stick to budgeting, debt, savings rate, general allocation concepts)
+- Human counselor quality is hard to scale — need a training playbook and quality rubric before hiring more
+- Churn risk if users don't see measurable financial improvement within 60 days — need strong onboarding and early wins baked in
+
+---
+
+**Estimated time to first paying customer:** 1 week (start manually, no code)
+
+---
+
 ## Token Usage Tracker
 
 | Session | Date | Ideas Generated | Approx Tokens Used |
 |---------|------|-----------------|--------------------|
 | 1 | 2026-05-15 | Idea #1 (AssumeAlert) | ~2,500 |
 | 2 | 2026-05-15 | Ideas #2–4 (AgentWatch, TechBuddy, PocketTown) | ~6,000 |
-| **Total** | | | **~8,500 / ~150,000 cap (~$50)** |
+| 3 | 2026-05-15 | Ideas #5–7 (PromptGuard, ChargeSpot, ClearWealth) | ~8,000 |
+| **Total** | | | **~16,500 / ~150,000 cap (~$50)** |
